@@ -16,6 +16,10 @@ use Rainlab\Blog\Controllers\Posts as PostsController;
  */
 class Plugin extends PluginBase
 {
+    /**
+     * @var array   Require the RainLab.Blog plugin
+     */
+    public $require = ['RainLab.Blog'];
 
     /**
      * Returns information about this plugin.
@@ -32,6 +36,10 @@ class Plugin extends PluginBase
         ];
     }
 
+
+    /**
+     * Add Mathjax dependencies to the PostsController
+     */
     public function boot()
     {
         PostsController::extend(function ($controller) {

@@ -35,17 +35,20 @@ MathJax.Hub.Config({
     elements: [ "blog-post-preview" ]
 });
 
-function updateMathJax()
-{
-  MathJax.Hub.Queue(["Typeset", MathJax.Hub, "blog-post-preview" ]);
-}
 
 var timeout;
+var el;
 
 $(window).load(function () {
 
+  el = document.getElementById("blog-post-preview");
   $("textarea").keyup(function () {
     clearTimeout(timeout);
     timeout = setTimeout(updateMathJax, 2000);
   });
 });
+
+function updateMathJax()
+{
+  MathJax.Hub.Queue(["Typeset", MathJax.Hub, el ]);
+}

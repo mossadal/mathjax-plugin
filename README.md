@@ -1,6 +1,8 @@
 # mathjax-plugin
 
-Enable MathJax in the backend, so that blog post previews containing mathematical formulas are rendered correctly.
+Simple plugin for OctoberCMS. The plugin enables MathJax in the backend blog
+entry page, so that blog post previews containing mathematical formulas are
+rendered correctly.
 
 
 ## Description

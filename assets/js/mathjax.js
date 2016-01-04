@@ -32,7 +32,7 @@ MathJax.Hub.Config({
         }
     },
     messageStyle: "none",
-    elements: [ "blog-post-preview" ]
+    elements: [ "editor-preview" ]
 });
 
 
@@ -41,7 +41,7 @@ var el;
 
 $(window).load(function () {
 
-  el = document.getElementById("blog-post-preview");
+  el = document.getElementsByClassName("editor-preview")[0];
   $("textarea").keyup(function () {
     clearTimeout(timeout);
     timeout = setTimeout(updateMathJax, 2000);

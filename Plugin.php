@@ -43,7 +43,7 @@ class Plugin extends PluginBase
     public function boot()
     {
         PostsController::extend(function ($controller) {
-            $controller->addJs("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML");
+            $controller->addJs("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML");
             $controller->addJs("/plugins/mossadal/mathjax/assets/js/mathjax.js");
         });
     }
